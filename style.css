@@ -167,3 +167,18 @@ body {
     padding: 8px 10px;   
     cursor: pointer;
    }
+
+   /* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .row input {
+        padding: 8px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
