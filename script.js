@@ -16,12 +16,24 @@ document.getElementById('moon').addEventListener('click', () => {
       li.append(sp);
       lc.append(li);
     }
-    input.value = '';  
+    input.value = ""; 
+    savedata();
   }
   document.getElementById('listcontainer').addEventListener('click', (e) => {
     if (e.target.tagName === 'LI') {
-      e.target.classList.toggle('checked');  
+      e.target.classList.toggle('checked');
+      savedata();  
     } else if (e.target.tagName === 'SPAN' || e.target.closest('span')) {  
       e.target.closest('li').remove();
+      savedata();
     }
   }, false);
+
+  function  savedata(){
+    localStorage.setItem("data",listcontainer.innerHTML);
+  }
+  function showTask(){
+    listcontainer.innerHTML=localStorage.getItem("data");
+  }
+
+  showTask();
