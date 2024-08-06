@@ -171,14 +171,25 @@ body {
    /* Media Query for Responsive Design */
 @media (max-width: 768px) {
     .container {
-        width: 100%;
+        width: 95%;
         padding: 10px;
+        margin-right: 10px;
     }
     .row input {
         padding: 8px;
     }
+    input {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        
+        background-color: transparent;
+       }
     .btn {
-        padding: 10px 20px;
+
         font-size: 14px;
     }
-}
+ }
